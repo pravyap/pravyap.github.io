@@ -1,0 +1,253 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff; /* White background for the whole page */
+    color: #1D4D54; /* Dark teal text color */
+    line-height: 1.6;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  header {
+    background: white;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #1D4D54; /* Dark teal */
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    font-weight: 500;
+  }
+
+  .nav-links a {
+    position: relative;
+    color: #1D4D54; /* Dark teal */
+    font-size: 1rem;
+    padding: 0.3rem 0;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #1D4D54; /* Dark teal */
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .nav-links a:hover {
+    color: #1D4D54; /* Dark teal */
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  .hero {
+    padding: 6rem 0 4rem;
+    background: linear-gradient(135deg, #1D4D54, #3b82f6);
+    color: white;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+  }
+
+  .btn-primary {
+    background: white;
+    color: #1D4D54; /* Dark teal */
+    font-weight: 600;
+    padding: 0.75rem 2.5rem;
+    border-radius: 40px;
+    box-shadow: 0 6px 15px rgb(255 255 255 / 0.5);
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background: #1D4D54; /* Dark teal */
+    color: white;
+    box-shadow: 0 8px 20px rgb(30 64 175 / 0.7);
+  }
+
+  .products {
+    padding: 4rem 0;
+    padding-top: 6.0em;
+    background: white;
+  }
+
+  .products h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #1D4D54; /* Dark teal */
+  }
+
+  .products-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .product-card {
+    background: #f3f4f6;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 0.03);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgb(0 0 0 / 0.1);
+  }
+
+  .product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 3px solid #1D4D54; /* Dark teal */
+  }
+
+  .product-title {
+    padding: 1rem 1.25rem;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: #1D4D54; /* Dark teal */
+    text-align: center;
+  }
+
+  .about {
+    background: #e0f2f1; /* Light teal */
+    padding: 4rem 0;
+    text-align: center;
+    color: #1D4D54; /* Dark teal text */
+    padding-top: 6.0em;
+  }
+
+  .about h2 {
+    font-weight: 700;
+    font-size: 2.5rem; /* Increased font size */
+    margin-bottom: 1rem;
+  }
+
+  .about h3 {
+    font-weight: 500;
+    font-size: 1.5rem; /* Subheading */
+    margin-bottom: 1rem;
+  }
+
+  .about p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    padding: 0 1rem; /* Add padding for better spacing */
+    text-align: left; /* Left align for readability */
+  }
+
+  .about ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 1rem 0;
+    text-align: left; /* Left align for readability */
+  }
+
+  .about li {
+    margin: 0.5rem 0;
+    font-weight: 400;
+    font-size: 1.1rem;
+  }
+
+  footer {
+    background: #1D4D54; /* Dark teal */
+    color: white; /* White text for contrast */
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  footer a {
+    color: #60a5fa;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+  }
+
+  footer a:hover {
+    color: #93c5fd;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+    }
+
+    .nav-links {
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nav-links {
+      display: none;
+    }
+  }
